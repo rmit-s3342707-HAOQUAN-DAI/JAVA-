@@ -5,6 +5,7 @@ public class Test {
 	static int i;
 	static Scanner s = new Scanner(System.in);
 	static int[] A = new int[] {1,23,4,6,63,23,34,6,2,76,32,3,42,35,2,95};
+	static int[] B = new int[] {0,10,20,30,40,50,60,70,80,90,100};
 	static int [] array = {12,23,34,49,59,64,71,89,92,0,4,23,7,52};
 	static int [] negArray = new int [] {-12,-23,-34,-47,-59,-64,-71,-89,-92,-10,-45,-23,-74,-52};
 	static String [] names = {"Jack","Bob","George","Lina","Demi","Molly","Allen","Tim","Shirley","Tony"};
@@ -23,46 +24,38 @@ public class Test {
 		//System.out.println("The largest number in array is:");
 		//ArrayDemo.printMax();
 			
-		ArrayDemo.printSequence(array);
-		ArrayDemo.selectionSort(array);
-		ArrayDemo.printSequence(array);
+//		ArrayDemo.printSequence(array);
+//		ArrayDemo.selectionSort(array);
+//		ArrayDemo.printSequence(array);
+//		
+//		printArray(A);
+//		sortRank(A);
+//		printArray(A);
+//		
+//		ArrayDemo.bubbleSort_2(array);
+//		ArrayDemo.printSequence(array);
+//		
+//		Arrays.sort(negArray); // java 自带的排序工具
+//		ArrayDemo.printSequence(negArray);
+//		
+//		Arrays.sort(names);
+//		ArrayDemo.printStr(names);
+//		
+//		int a = ArrayDemo.getIndex(array, 4);
+//		int b = ArrayDemo.getContent(array, 8);	
+//		System.out.println("Index 4 is in position: " + a);
+//		System.out.println("Position 8 is:" + b);
+//		
+		int c = ArrayDemo.binarySearch_2(B, 55);
+		System.out.println("the position is: " + c);
+		int d = Arrays.binarySearch(B, 90); //java 自带工具，但不能查找数组中没有的数字位置，否则返回值为负数的位置点再-1
+		System.out.println("the position should be: " + d);
 		
-		printArray(A);
-		sortRank(A);
-		printArray(A);
-		
-		ArrayDemo.bubbleSort_2(array);
-		ArrayDemo.printSequence(array);
-		
-		Arrays.sort(negArray); // java 自带的排序工具
-		ArrayDemo.printSequence(negArray);
-		Arrays.sort(names);
-		ArrayDemo.printStr(names);
-		
+		//16进制
+		Hexadecimal.toHex_3(60);
+		Hexadecimal.toHex_4(60);
 		
 	}
 	
-	public static void sortRank(int[] sortList){
-		for(int x=0;x<sortList.length-1;x++){
-			for(int y =x+1;y<sortList.length;y++) {
-				if(sortList[x]>sortList[y]) {
-					int temp = sortList[x];
-					sortList[x]=sortList[y];
-					sortList[y]=temp;
-				}
-			}
-		}
-		
-	}
-	
-	public static void printArray(int[] arr) {
-		System.out.print("[");
-		for(int i=0;i<arr.length;i++) {
-			if(i!=arr.length-1) 
-				System.out.print(arr[i] + ",");
-			else
-				System.out.println(arr[i] + "]");
-		}
-	}
 
 }

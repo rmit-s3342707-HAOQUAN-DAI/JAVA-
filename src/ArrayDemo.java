@@ -1,3 +1,4 @@
+import java.util.*;
 
 public class ArrayDemo {
 	
@@ -102,8 +103,7 @@ public class ArrayDemo {
 					arr[j+1] = temp;
 				}
 			}
-		}
-			
+		}		
 	}
 	
 	public static void bubbleSort_3(int[] arr) {
@@ -117,8 +117,7 @@ public class ArrayDemo {
 					swap(arr, j, j+1); //调用swap方法
 				}
 			}
-		}
-			
+		}			
 	}
 //===========================end=================================
 
@@ -140,5 +139,110 @@ public class ArrayDemo {
 		arr[a] = arr[b];
 		arr[b] = temp;
 	}
+//===============================Search==================================
+	//find the position of an value
+	public static int getIndex(int[] arr, int index) { //确定了类型为int，就必须有一个int返回值
+		
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i] == index) 
+			{
+				return i;
+			}
+		}
+		return -1; //角标最小是0，所以当返回值为-1时，这个值就是不存在
+	}
+	
+	//find the value of a position
+	public static int getContent(int[] arr, int index) {
+		
+		for(int i=0;i<arr.length;i++) {
+			if(i == index) 
+			{
+				return arr[i];
+			}
+		}
+		return -1;
+	}
+	
+//二分查找  注意：必须是按顺序排列的数组才能用二分查找 binary search
+	public static int binarySearch(int[] arr, int key) {
+		int max,min,mid;
+		min = 0;
+		max = arr.length-1;
+		mid = (max + min)/2;
+		
+		while (arr[mid] != key) {
+			if(key>arr[mid])
+			{
+				min = mid + 1;
+			}else if(key < arr[mid])
+			{
+				max = mid - 1;
+			}
+			if(max<min)
+			{			
+				//System.out.print("Value not found");
+				return -1;
+			}
+			//break;
+			mid = (max+min)/2;
+		}
+		return mid;
+		
+	}
+	
+	
+	public static int binarySearch_2(int[] arr, int key) {
+		int max,min,mid;
+		min = 0;
+		max = arr.length-1;
+		
+		while (min <= max) {
+			mid = (max + min)>>1;
+			if(key>arr[mid])
+			{
+				min = mid + 1;
+			}else if(key < arr[mid])
+			{
+				max = mid - 1;
+			}
+			else
+			{			
+				return mid;
+			}	
+			
+		}
+		//System.out.print("Value not found");
+		//return -1;	
+		return min;
+	}
+	
+//================Interview Question==================
+//往一个有序的数组中加入一个数，这个数的角标如何获取
+	
+	public static int binarySearch_3(int[] arr, int key) {
+		int max,min,mid;
+		min = 0;
+		max = arr.length-1;
+		
+		while (min <= max) {
+			mid = (max + min)>>1;
+			if(key>arr[mid])
+			{
+				min = mid + 1;
+			}else if(key < arr[mid])
+			{
+				max = mid - 1;
+			}
+			else
+			{			
+				return mid;
+			}	
+			
+		}
+		//返回当前这个数字应该在哪个位置
+		return min;
+	}
+	
 	
 }
