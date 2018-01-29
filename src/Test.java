@@ -46,14 +46,22 @@ public class Test {
 //		System.out.println("Index 4 is in position: " + a);
 //		System.out.println("Position 8 is:" + b);
 //		
-		int c = ArrayDemo.binarySearch_2(B, 55);
-		System.out.println("the position is: " + c);
-		int d = Arrays.binarySearch(B, 90); //java 自带工具，但不能查找数组中没有的数字位置，否则返回值为负数的位置点再-1
-		System.out.println("the position should be: " + d);
+//		int c = ArrayDemo.binarySearch_2(B, 55);
+//		System.out.println("the position is: " + c);
+//		int d = Arrays.binarySearch(B, 90); //java 自带工具，但不能查找数组中没有的数字位置，否则返回值为负数的位置点再-1
+//		System.out.println("the position should be: " + d);
 		
 		//16进制
-		Hexadecimal.toHex_3(60);
-		Hexadecimal.toHex_4(60);
+//		Hexadecimal.toHex_3(60);
+//		Hexadecimal.toHex_4(60);
+		System.out.println(ArrayDemo.getWeek());
+		System.out.println(Utility.getRandomName());
+		Hexadecimal.toBinary(2);
+		
+//		System.out.print(Integer.toBinaryString(20)); //JAVA 自带的转进制函数
+//		System.out.print(Integer.toHexString(20)); //JAVA 自带的转进制函数
+		
+		TwoDArray.print();
 		
 	}
 	

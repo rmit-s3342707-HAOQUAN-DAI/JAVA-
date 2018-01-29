@@ -5,8 +5,13 @@ public class ArrayDemo {
 	static int [] array = {12,23,34,49,59,64,71,89,92,0,4,23,7,52};
 	static int [] negativeArray = new int [] {-12,-23,-34,-47,-59,-64,-71,-89,-92,-10,-45,-23,-74,-52};
 	static String [] names = {"Jack","Bob","George","Lina","Demi","Molly","Allen","Tim","Shirley","Tony"};
+	static String [] week = new String []{"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
 	
-
+	public static String getWeek(){
+		int num = Utility.GetRandom(0, 6);
+		return week[num];
+	}
+	
 	public static void print(int i) {
 		
 		System.out.println(names[i]);
