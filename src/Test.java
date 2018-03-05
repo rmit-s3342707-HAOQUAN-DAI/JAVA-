@@ -61,8 +61,12 @@ public class Test {
 //		System.out.print(Integer.toBinaryString(20)); //JAVA 自带的转进制函数
 //		System.out.print(Integer.toHexString(20)); //JAVA 自带的转进制函数
 		
-		TwoDArray.print();
+//		TwoDArray.print();
 		
+		System.out.println(ArrayDemo.getMax(array));
+		ArrayDemo.printMax();
+		ArrayDemo.selectionSort_2(array);
+		ArrayDemo.printSequence(array);
 	}
 	
 

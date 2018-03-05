@@ -23,13 +23,13 @@ public class ArrayDemo {
 
 //===============Array 求最大 =============================
 	public static int getMax(int[] arr) {
-		int maxIndex = arr[0]; //这里不用0 因为是数组自己的数据跟自己比，不用跟0比
+		int maxElement = arr[0]; //这里不用0 因为是数组自己的数据跟自己比，不用跟0比
 		
 		for(int i = 1; i<arr.length; i++) { //i初始等于1，因为第一个数字不用跟第一个数字相比较
-			if(arr[i]>maxIndex)
-				maxIndex = i;
+			if(arr[i]>maxElement)
+				maxElement = arr[i];
 		}
-		return arr[maxIndex];
+		return maxElement;
 	}
 	
 	public static int getMax_2(int[] arr) {
@@ -65,6 +65,29 @@ public class ArrayDemo {
 			}
 		}
 	}
+	
+	
+	public static void selectionSort_2(int[] arr) {
+	
+		for (int x=0; x<arr.length-1; x++){
+			int num = arr[x];
+			int index = x;
+			for(int y = x+1; y<arr.length; y++){
+				if (num > arr[y]){
+					num = arr[y];
+					index = y;
+				}
+				
+			}
+			if(index!=x){
+				swap(arr,x,index);
+			}
+		}
+		
+		
+		
+	}
+	
 	
 	public static void printSequence(int[] arr) {
 		//sortSequence(array);
