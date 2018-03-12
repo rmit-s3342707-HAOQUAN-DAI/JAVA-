@@ -7,6 +7,17 @@ public class ArrayDemo {
 	static String [] names = {"Jack","Bob","George","Lina","Demi","Molly","Allen","Tim","Shirley","Tony"};
 	static String [] week = new String []{"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
 	
+	public static void printArray(int[] arr) {
+		System.out.print("[");
+		for(int i=0;i<arr.length;i++) {
+			if(i!=arr.length-1) 
+				System.out.print(arr[i] + ",");
+			else
+				System.out.println(arr[i] + "]");
+		}
+		
+	}
+	
 	public static String getWeek(){
 		int num = Utility.GetRandom(0, 6);
 		return week[num];

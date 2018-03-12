@@ -65,8 +65,10 @@ public class Test {
 		
 		System.out.println(ArrayDemo.getMax(array));
 		ArrayDemo.printMax();
+		ArrayDemo.printArray(negArray);
 		ArrayDemo.selectionSort_2(array);
 		ArrayDemo.printSequence(array);
+		
 	}
 	
 
