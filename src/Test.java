@@ -63,12 +63,13 @@ public class Test {
 		
 		System.out.println(ArrayDemo.getMax(array));
 		ArrayDemo.printMax();
-		ptArray(array);
+
 		
 		//ArrayDemo.selectionSort_2(array);
 		//ArrayDemo.printSequence(array);
 		
-
+		System.out.print(Utility.getRank(75));
+		
 		ArrayDemo.printArray(negArray);
 		Sort.selectionSort2(array);
 		Sort.printSequence(array);
@@ -78,22 +79,11 @@ public class Test {
 
 		TwoDArray.printTwoDArray(arr);
 
-		System.out.print(Utility.getRank(75));
-
-
-	}
-	
-	
-	public static void ptArray(int[] arr){
-		System.out.print("[");
-		for (int a=0; a<arr.length; a++){
-			if(a != arr.length-1)
-				System.out.print(arr[a]+",");
-			else
-				System.out.println(arr[a] + "]");
-		}	
 		
+
+
 	}
+	
 		
 	
 }

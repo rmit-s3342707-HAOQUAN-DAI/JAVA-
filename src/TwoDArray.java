@@ -3,7 +3,7 @@ public class TwoDArray {
 	
 	//另一种定义方法
 	int [][] arr = {{3,1,7},{2,6,9,4},{4,1}}; //定义一个二维数组，里面有3个一维数组，每个一维数组中有3个/4个/2个 值
-	
+	//String [][] arr2 = new String [3][2];
 	
 	
 	
@@ -26,11 +26,13 @@ public class TwoDArray {
 	
 	public static void print(){
 
-		int [][] array = new int[3][];
-		array[0] = new int[2]; //一维数组中第一组为2个元素，值为0
-		array[1] = new int[1]; //一维数组中第一组为1个元素，值为0
-		array[2] = new int[3]; //一维数组中第一组为3个元素，值为0
-
+		String [][] array = new String[3][];
+		array[0] = new String[2]; //一维数组中第一组为2个元素，值为0
+		array[1] = new String[1]; //一维数组中第一组为1个元素，值为0
+		array[2] = new String[3]; //一维数组中第一组为3个元素，值为0
+		
+		array[0][0] = "George";
+		array[0][0] = "John";
 //		System.out.println(array.length);//打印二维数组的长度，其实就是一维数组的个数
 //		System.out.println(array[1].length);//打印二维数组中角标为“1”的一维数组的长度
 		
@@ -39,7 +41,7 @@ public class TwoDArray {
 
 	}
 	
-	public static void printArray(int arr[][]) 
+	public static void printTwoDArray(int arr[][]) 
 	{
 		for(int i=0;i<arr.length;i++) 
 		{
@@ -49,6 +51,8 @@ public class TwoDArray {
 			}
 		}
 	}
+
+
 	
 
 }

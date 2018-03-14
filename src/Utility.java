@@ -9,9 +9,7 @@ public class Utility {
             "Adam", "Bill", "Crown", "Dixon", "Evans", "Fernando", "Gordon", "Hamilton", "Doe" ,"Joe","Puppy","Porter"
     };
     
-	public Utility() {
-		// TODO Auto-generated constructor stub
-	}
+
 	
 	static java.util.Random rand = new java.util.Random();
 
