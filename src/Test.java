@@ -28,9 +28,6 @@ public class Test {
 //		ArrayDemo.selectionSort(array);
 //		ArrayDemo.printSequence(array);
 //		
-//		printArray(A);
-//		sortRank(A);
-//		printArray(A);
 //		
 //		ArrayDemo.bubbleSort_2(array);
 //		ArrayDemo.printSequence(array);
@@ -65,9 +62,24 @@ public class Test {
 		
 		System.out.println(ArrayDemo.getMax(array));
 		ArrayDemo.printMax();
-		ArrayDemo.selectionSort_2(array);
-		ArrayDemo.printSequence(array);
-	}
+		ptArray(array);
+		
+		//ArrayDemo.selectionSort_2(array);
+		//ArrayDemo.printSequence(array);
+		
+		
 	
-
+	}
+	public static void ptArray(int[] arr){
+		System.out.print("[");
+		for (int a=0; a<arr.length; a++){
+			if(a != arr.length-1)
+				System.out.print(arr[a]+",");
+			else
+				System.out.println(arr[a] + "]");
+		}	
+		
+	}
+		
+	
 }
