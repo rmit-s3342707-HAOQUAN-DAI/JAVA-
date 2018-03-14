@@ -67,9 +67,15 @@ public class Test {
 		//ArrayDemo.selectionSort_2(array);
 		//ArrayDemo.printSequence(array);
 		
+
+		ArrayDemo.printArray(negArray);
+		ArrayDemo.selectionSort_2(array);
+		ArrayDemo.printSequence(array);
 		
-	
+
 	}
+	
+	
 	public static void ptArray(int[] arr){
 		System.out.print("[");
 		for (int a=0; a<arr.length; a++){
