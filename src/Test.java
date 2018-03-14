@@ -72,6 +72,7 @@ public class Test {
 		ArrayDemo.selectionSort_2(array);
 		ArrayDemo.printSequence(array);
 		
+		System.out.print(Utility.getRank(75));
 
 	}
 	

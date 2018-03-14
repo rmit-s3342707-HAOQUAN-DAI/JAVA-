@@ -25,5 +25,35 @@ public class Utility {
 		return firstNames[firstNameIndex] + "." + lastNames[lastNameIndex];
     	
     }
+    
+    public boolean compare(String a, String b){
+		boolean x;
+		if(a==b)
+			x=true;
+		else 
+			x=false;
+		return x;
+    	//return (a==b)?true:false;
+    	//return a==b;
+    	
+    }
+    
+    public static char getRank(int number){
+    	char rank = 0;
+    	
+    	if (90<=number && number<=100)	
+    		rank = 'A';
+    	else if (80<=number && number<90)	
+    		rank = 'B';
+    	else if (70<=number && number<80)	
+    		rank = 'C';
+    	else if (60<=number && number<70)	
+    		rank = 'D';
+    	else 
+    		rank = 'F';
+    	
+    	return rank;
+    }
+    
 
 }
