@@ -9,6 +9,7 @@ public class Test {
 	static int [] array = {12,23,34,49,59,64,71,89,92,0,4,23,7,52};
 	static int [] negArray = new int [] {-12,-23,-34,-47,-59,-64,-71,-89,-92,-10,-45,-23,-74,-52};
 	static String [] names = {"Jack","Bob","George","Lina","Demi","Molly","Allen","Tim","Shirley","Tony"};
+	static int [][] arr = {{3,1,7},{2,6,9,4},{4,1}};
 	
 	public static void main(String[] args) {
 		System.out.println("Total number of people is:" );
@@ -35,21 +36,21 @@ public class Test {
 //		ArrayDemo.bubbleSort_2(array);
 //		ArrayDemo.printSequence(array);
 //		
-//		Arrays.sort(negArray); // java 自带的排序工具
+//		Arrays.sort(negArray);			 // java 自带的排序工具
 //		ArrayDemo.printSequence(negArray);
 //		
 //		Arrays.sort(names);
 //		ArrayDemo.printStr(names);
 //		
-//		int a = ArrayDemo.getIndex(array, 4);
-//		int b = ArrayDemo.getContent(array, 8);	
-//		System.out.println("Index 4 is in position: " + a);
-//		System.out.println("Position 8 is:" + b);
-//		
-//		int c = ArrayDemo.binarySearch_2(B, 55);
-//		System.out.println("the position is: " + c);
-//		int d = Arrays.binarySearch(B, 90); //java 自带工具，但不能查找数组中没有的数字位置，否则返回值为负数的位置点再-1
-//		System.out.println("the position should be: " + d);
+		int a = Sort.getIndex(array, 4);
+		int b = Sort.getContent(array, 8);	
+		System.out.println("Index 4 is in position: " + a);
+		System.out.println("Position 8 is:" + b);
+		
+		int c = Sort.binarySearch_2(B, 55);
+		System.out.println("the position is: " + c);
+		int d = Arrays.binarySearch(B, 90); 		//java 自带工具，但不能查找数组中没有的数字位置，否则返回值为负数的位置点再-1
+		System.out.println("the position should be: " + d);
 		
 		//16进制
 //		Hexadecimal.toHex_3(60);
@@ -66,9 +67,12 @@ public class Test {
 		System.out.println(ArrayDemo.getMax(array));
 		ArrayDemo.printMax();
 		ArrayDemo.printArray(negArray);
-		ArrayDemo.selectionSort_2(array);
-		ArrayDemo.printSequence(array);
+		Sort.selectionSort2(array);
+		Sort.printSequence(array);
 		
+		System.out.println(OverLoad.add(3.4,10.3)); //overload practice
+		
+		TwoDArray.printTwoDArray(arr);
 	}
 	
 
