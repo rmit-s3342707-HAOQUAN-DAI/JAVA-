@@ -1,9 +1,3 @@
-import java.util.ArrayList;
-
-import polymorphism.Saloon;
-import polymorphism.Truck;
-import polymorphism.Vehicle;
-
 /*
  * 面向过程：对于面向过程，强调的是过程（动作） 比如 C语言
  * 举例：
@@ -55,7 +49,6 @@ public class ObjectOriented {
 		show(c1);
 		show(c3);
 		//c1.run(); //运行. 要使用对象中的内容，可以通过 对象.成员 的形式来完成调用
-		printArrayList(v);
 
 	}
 	
@@ -66,27 +59,7 @@ public class ObjectOriented {
 		System.out.println(e.wheelnumber+" "+e.carcolor);
 	}
 	
-static ArrayList<Vehicle> v = new ArrayList<Vehicle>();
 	
-	Saloon c1 = new Saloon(000001, 2011, "$40,000", "X3", "Gray");
-	Saloon c2 = new Saloon(000002, 2013, "$41,500", "X3", "Blue");
-
-	Truck t1 = new Truck(100001, 2015, "$91,500", "TypeII", "Black", "5T");
-	Truck t2 = new Truck(100002, 2014, "$94,500", "TypeI", "Black", "4T");
-	
-	public void storeInfo() {
-		v.add(c1);
-		v.add(c2);
-		v.add(t1);
-		v.add(t2);
-	}
-	
-	public void printArrayList(ArrayList<String> display) {
-		for(int i = 0; i<=display.size(); i++) 
-		{
-			System.out.println(display.get(i));
-		}
-	}
 	
 }
 
