@@ -1,4 +1,7 @@
 import java.util.Scanner;
+
+import polymorphism.Demo;
+
 import java.util.*;
 
 public class Test {
@@ -15,6 +18,7 @@ public class Test {
 		System.out.println("Total number of people is:" );
 		
 		ArrayDemo.printLength();
+		
 		
 		//System.out.println("Please enter the number:");
 
