@@ -3,69 +3,40 @@ package polymorphism;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+/*
+ *  "static" 被static修饰，就被所有对象共享，称之为对象的共享数据
+ *  "static" 优先于对象存在，因为static的成员随着类的加载就已经存在了
+ *  "static" 可以直接被类名调用，格式为： 类名.静态成员
+ *  "static" 修饰的数据是共享数据，对象中储存的是特有数据
+ */
 public class Demo {
-	static ArrayList<Vehicle> v = new ArrayList<Vehicle>();
+	static Saloon s4 = new Saloon(000004, 2011, "$40,000", "X3", "Gray");
 	
-	static Saloon c1 = new Saloon(000001, 2011, "$40,000", "X3", "Gray");
-	//static Saloon c2 = new Saloon(000002, 2013, "$41,500", "X3", "Blue");
-	//static Truck t1 = new Truck(100001, 2015, "$91,500", "TypeII", "Black", "5T");
-	//static Truck t2 = new Truck(100002, 2014, "$94,500", "TypeI", "Black", "4T");
-	
-//	public static void storeInfo() {
-//		v.add(c1);
-//		v.add(c2);
-//		v.add(t1);
-//		v.add(t2);
-//		
-//		//System.out.println(c1.vehicleID + "..." +c1.year);
-//	}
-	
-
 	public static void main(String[] args) {
-//		v.add("Bob");
-//		v.add("George");
-//		v.add("Steve");
-//		v.add("James");
-//		printArrayList(v);
 
-		v.add(c1);
-		v.add(new Saloon(000002, 2013, "$41,500", "X3", "Blue"));
-		//v.add(t1);
-		//v.add(t2);
-		
-		for(int i=0;i<v.size();i++) 
-		{
-			System.out.println(v.get(i));
-		}
-		
-		System.out.print(c1);
-		
-		
-//		for(Vehicle vehicle:v) {
-//			//System.out.println(v);
-//			System.out.printf("%06d%6d%10s%8s%6s%6s%n", 
-//					Vehicle.vehicleID,Vehicle.year,Vehicle.price,Vehicle.model,Vehicle.color,Truck.maxLoad);
-//
-//		}
-		
+		//Information.printInfo();
+		//Information.printTruckInfo();
 		
 //		Iterator<Vehicle> list = v.iterator();
 //		while(list.hasNext()) 
 //		{
 //			System.out.printf("%06d%6d%10s%5s%6s%6s%n", 
-//					Vehicle.vehicleID,Vehicle.year,Vehicle.price,Vehicle.model,Vehicle.color,Truck.maxLoad);
+//					Vehicle.getVehicleID(),Vehicle.year,Vehicle.price,Vehicle.model,Vehicle.color,Truck.maxLoad);
 //		}
-		
-			
-			//printArrayList(v.size());
-			
+		Person p = new Person("旺财", 16);
+		p.speak();
+		Person p1 = new Person("胖胖");
+		p1.speak();
+		Person p3 = new Person("Pang",22,"OZ");
+		p3.speak();
+		p1.compare(p3);
+		System.out.println(Person.country);
 
 	}
-	
 
 	
 	public static void printArrayList(ArrayList<Vehicle> A) {
-		for(int i = 0; i<=A.size(); i++) 
+		for(int i = 0; i<=A.size()-1; i++) 
 		{
 			System.out.println(A.get(i));
 		}

@@ -133,7 +133,7 @@ public class Sort {
 		}
 		
 		
-	public static void swap(int[] arr, int a, int b) {
+	private static void swap(int[] arr, int a, int b) {
 			//建一个换位的方法，可以随时调用
 			int temp = arr[a];
 			arr[a] = arr[b];

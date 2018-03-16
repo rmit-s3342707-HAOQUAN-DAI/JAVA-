@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*
  * 面向过程：对于面向过程，强调的是过程（动作） 比如 C语言
  * 举例：
@@ -33,8 +35,9 @@
  */
 
 public class ObjectOriented {
-	//在计算机中创建一个car的实例，通过new关键字
-	
+	 //在计算机中创建一个car的实例，通过new关键字
+	static ArrayList<String> list = new ArrayList<String>();
+
 	public static void main(String[] args) 
 	{
 		//new car(); //匿名对象，简写格式
@@ -49,6 +52,7 @@ public class ObjectOriented {
 		show(c1);
 		show(c3);
 		//c1.run(); //运行. 要使用对象中的内容，可以通过 对象.成员 的形式来完成调用
+		list.add("Bob");
 
 	}
 	
@@ -77,6 +81,7 @@ public class ObjectOriented {
 			System.out.println(wheelnumber+" "+carcolor);
 		}
 	}
+	
 	
 	
 

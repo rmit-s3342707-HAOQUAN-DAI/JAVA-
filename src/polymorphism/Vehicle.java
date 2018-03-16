@@ -1,11 +1,11 @@
 package polymorphism;
 
 public class Vehicle {
-	static int vehicleID;
-	static int year;
-	static String price;
-	static String model;
-	static String color;
+	private int vehicleID;
+	private int year;
+	private String price;
+	private String model;
+	private String color;
 	
 	
 	public Vehicle (int vehicleID,int year,String price,String model,String color)
@@ -38,7 +38,7 @@ public class Vehicle {
         return price;
     }
 
-    public void setVehicleID(String price) {
+    public void setVehiclePrice(String price) {
         this.price = price;
     }
     
@@ -58,8 +58,8 @@ public class Vehicle {
     	this.color = color;
     }
     
-    public String toString() 
-	{
-		return Vehicle.vehicleID +","+Vehicle.year +","+ Vehicle.price +","+ Vehicle.model +","+ Vehicle.color;
-	}
+//    public String toString() 
+//	{
+//		return Vehicle.vehicleID +","+Vehicle.year +","+ Vehicle.price +","+ Vehicle.model +","+ Vehicle.color;
+//	}
 }

@@ -1,7 +1,7 @@
 package polymorphism;
 
 public class Truck extends Vehicle{
-	static String maxLoad;
+	private String maxLoad;
 	
 	public Truck(int vehicleID, int year, String price, String model, String color) {
 		super(vehicleID, year, price, model, color);
