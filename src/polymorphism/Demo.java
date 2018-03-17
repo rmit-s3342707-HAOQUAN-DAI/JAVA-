@@ -8,6 +8,9 @@ import java.util.Iterator;
  *  "static" 优先于对象存在，因为static的成员随着类的加载就已经存在了
  *  "static" 可以直接被类名调用，格式为： 类名.静态成员
  *  "static" 修饰的数据是共享数据，对象中储存的是特有数据
+ *  是否用static 修饰，就看一点，该函数功能是否有访问到对象中的特有数据
+ *  从源代码看，该功能是否需要访问非静态的成员变量，如果需要，该功能就是非静态的
+ *  
  */
 public class Demo {
 	static Saloon s4 = new Saloon(000004, 2011, "$40,000", "X3", "Gray");

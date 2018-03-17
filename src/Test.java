@@ -14,7 +14,7 @@ public class Test {
 	static String [] names = {"Jack","Bob","George","Lina","Demi","Molly","Allen","Tim","Shirley","Tony"};
 	static int [][] arr = {{3,1,7},{2,6,9,4},{4,1}};
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		System.out.println("Total number of people is:" );
 		
 		ArrayDemo.printLength();
@@ -78,11 +78,13 @@ public class Test {
 		Sort.selectionSort2(array);
 		Sort.printSequence(array);
 		
-		System.out.println(OverLoad.add(3.4,10.3)); //overload practice
+		//System.out.println(OverLoad.add(3.4,10.3)); //overload practice
+		OverLoad c1 = new OverLoad(); //创建新的Overload对象，调用其中的方法，就不需要static修饰，否则上一种方法就需要static修饰
+		System.out.println(c1.add(2.6,4.2));
+		c1.printTable(8);//即便方法里已经有了变量9，还是会被覆盖
+		//TwoDArray.printTwoDArray(arr);
 		
-
-		TwoDArray.printTwoDArray(arr);
-
+		RockPaperScissorGame.iniGame();
 		
 
 

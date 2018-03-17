@@ -4,13 +4,7 @@ public class TwoDArray {
 	//另一种定义方法
 	int [][] arr = {{3,1,7},{2,6,9,4},{4,1}}; //定义一个二维数组，里面有3个一维数组，每个一维数组中有3个/4个/2个 值
 	//String [][] arr2 = new String [3][2];
-	
-	
-	
-	
-	
-	
-	
+
 	
 	public TwoDArray() {
 		int age = 16;
