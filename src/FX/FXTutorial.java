@@ -37,7 +37,19 @@ public class FXTutorial extends Application implements EventHandler<ActionEvent>
 		primaryStage.setTitle("Main Window");
 		b = new Button("Click");
 		//b.setText("Click");
-		b.setOnAction(this);//
+		//b.setOnAction(this);//
+		b.setOnAction(new EventHandler<ActionEvent>()
+		{
+
+			@Override
+			public void handle(ActionEvent event) {
+				// TODO Auto-generated method stub
+				System.out.println("OHHHhhhhhhhhhh");
+			}
+			
+		});
+		
+		//b.setOnAction(e ->System.out.println("This is new feature in JDK 8"););
 		
 		StackPane layout = new StackPane();
 		layout.getChildren().add(b);
@@ -52,9 +64,11 @@ public class FXTutorial extends Application implements EventHandler<ActionEvent>
 		
 	}
 	
+	
+	//另一个方法：监听event，在这里执行
 	public void handle(ActionEvent event)
 	{
-		if(event.getSource()==b)
+		if(event.getSource()==b)//如果button b 被点击
 		{
 			System.out.println("OOOOoooooooo I LOVE IT!");
 		}
