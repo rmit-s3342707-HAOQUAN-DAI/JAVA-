@@ -1,5 +1,6 @@
 package polymorphism;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Scanner;
@@ -14,6 +15,7 @@ public class Information {
 	static ArrayList<Saloon> saloonInfo = new ArrayList<Saloon>();
 	static ArrayList<Truck> t = new ArrayList<Truck>();
 	static ArrayList<Truck> truckInfo = new ArrayList<Truck>();
+	static ArrayList<Saloon[]> allvehicle = new ArrayList<Saloon[]>();
 	static int tempType,tempYear;
 	static String tempPrice,tempModel,tempColor;
 	static Saloon s1 = new Saloon("SALOON", 2011, "$40,000", "X3", "Gray");
@@ -23,6 +25,7 @@ public class Information {
 	static Truck t2 = new Truck("TRUCK", 2014, "$94,500", "TypeI", "Black", "4T");
 	static Truck t3 = new Truck("TRUCK", 2016, "$134,999", "Max", "Black", "6T");
 	static Saloon s4 = new Saloon(null, 0, null, null, null);
+	static Saloon temp = new Saloon("SALOON", 0, null, null, null);	
 	
 	static Scanner s = new Scanner(System.in);
 	
@@ -46,10 +49,9 @@ public class Information {
 		t.add(t3);
 	}
 	//
-	public static void setSaloonInfo()
+	public static void setSaloonInfo() throws IOException
 	{
-		Saloon temp = new Saloon("SALOON", 0, null, null, null);	
-		
+
 				//temp.setVehicleType("SALOON");
 				System.out.println("Please enter vehicle year (eg.1999)");
 				tempYear = s.nextInt();
@@ -68,13 +70,16 @@ public class Information {
 				temp.setVehicleColor(tempColor);
 
 				v.add(temp);
+				cloneInfo();
 				//saloonInfo.addAll(v);
 				//saloonInfo = (ArrayList<Saloon>) v.clone();
 				
 	}
 	
-	public static void cloneInfo() 
+	public static void cloneInfo() throws IOException 
 	{
+		setExitSaloonInfo();
+		setTruckInfo();
 		saloonInfo = (ArrayList<Saloon>) v.clone();
 		truckInfo = (ArrayList<Truck>) t.clone();
 	}

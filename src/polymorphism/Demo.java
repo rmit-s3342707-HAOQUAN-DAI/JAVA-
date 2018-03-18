@@ -1,6 +1,8 @@
 package polymorphism;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -18,7 +20,10 @@ public class Demo {
 	static Scanner s = new Scanner(System.in);
 	static int person;
 	static int submenu;
-	public static void main(String[] args) {
+	static ArrayList<String[]> saloon = new ArrayList<String[]>();
+	HashMap<Saloon,String> hash = new HashMap<>();
+	
+	public static void main(String[] args) throws IOException {
 		
 
 		iniSystem();
@@ -43,13 +48,13 @@ public class Demo {
 //		System.out.println(Person.country);
 
 	}
-	public static void iniSystem() 
+	public static void iniSystem() throws IOException 
 	{
-		Information.setExitSaloonInfo();
-		Information.setTruckInfo();
+		//Information.setExitSaloonInfo();
+		//Information.setTruckInfo();
 		Information.cloneInfo();
 		start();
-		menu();
+		
 	}
 	
 	public static void loadData() 
@@ -58,7 +63,7 @@ public class Demo {
 		
 	}
 	
-	public static void start() 
+	public static void start() throws IOException 
 	{
 		System.out.println("Welcome to Vechile information system");
 		System.out.println("Please select from below:");
@@ -67,11 +72,7 @@ public class Demo {
 		System.out.println("0 to exit");
 		System.out.println("----------------------------------------");
 		person = s.nextInt();
-	}
-	
-	public static void menu()
-	{
-		
+		//LoadData.getLineList(saloon);
 		if (person ==1)
 		{
 			System.out.println("Saloon Information:");
@@ -79,17 +80,18 @@ public class Demo {
 			System.out.println("Truck Information");
 			Information.printTruckInfo();
 			start();
-			menu();
+			
 		}
 		else if (person ==2) 
 		{
-			do
-				{
-				subMenu();	
-				
-				}while(submenu==1);
+//			do
+//				{
+//				subMenu();	
+//				
+//				}while(submenu==1);
+			subMenu();
 			start();
-			menu();
+			
 		}
 		else if (person ==0)
 		{
@@ -102,9 +104,10 @@ public class Demo {
 		}
 	}
 	
-	public static void subMenu() 
+	public static void subMenu() throws IOException 
 	{
 		Information.setSaloonInfo();
+		//saloon.addAll(Information.saloonInfo);
 		System.out.println("added.want to continue? 1 for yes, 2 for no");
 		submenu = s.nextInt();	
 	}

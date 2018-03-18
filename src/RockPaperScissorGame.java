@@ -31,6 +31,7 @@ public class RockPaperScissorGame {
 //		iniGame();	
 //	}
 	
+	//save result to "Record.txt"
 	public static void saveResult() throws IOException 
 	{
 		File file = new File("Records.txt");
