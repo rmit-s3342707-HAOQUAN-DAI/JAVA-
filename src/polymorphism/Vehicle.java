@@ -1,16 +1,16 @@
 package polymorphism;
 
 public class Vehicle {
-	private int vehicleID;
+	private String vehicleType;
 	private int year;
 	private String price;
 	private String model;
 	private String color;
 	
 	
-	public Vehicle (int vehicleID,int year,String price,String model,String color)
+	public Vehicle (String vehicleType,int year,String price,String model,String color)
 	{
-		this.vehicleID = vehicleID;
+		this.vehicleType = vehicleType;
 		this.year = year;
 		this.price = price;
 		this.model = model;
@@ -18,12 +18,13 @@ public class Vehicle {
 	}
 	
 	
-	public int getVehicleID() {
-        return vehicleID;
+	
+	public String getVehicleType() {
+        return vehicleType;
     }
 
-    public void setVehicleID(int vehicleID) {
-        this.vehicleID = vehicleID;
+    public void setVehicleType(String vehicleType) {
+        this.vehicleType = vehicleType;
     }
     
     public int getYear() {

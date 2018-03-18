@@ -1,0 +1,7 @@
+Vehicle,Year,Price,Model,Color,MaxLoad,TopSpeed
+SALOON, 2011, "$40,000", "X3", "Gray"
+SALOON, 2013, "$41,500", "X3", "Blue"
+SALOON, 2014, "$51,500", "5S", "Black"
+TRUCK, 2015, "$91,500", "TypeII", "Black", "5T"
+TRUCK, 2014, "$94,500", "TypeI", "Black", "4T"
+TRUCK, 2016, "$134,999", "Max", "Black", "6T"

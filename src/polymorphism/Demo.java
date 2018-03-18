@@ -2,6 +2,7 @@ package polymorphism;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Scanner;
 
 /*
  *  "static" 被static修饰，就被所有对象共享，称之为对象的共享数据
@@ -13,12 +14,15 @@ import java.util.Iterator;
  *  
  */
 public class Demo {
-	static Saloon s4 = new Saloon(000004, 2011, "$40,000", "X3", "Gray");
-	
+	static Saloon s4 = new Saloon("SALOON", 2011, "$40,000", "X3", "Gray");
+	static Scanner s = new Scanner(System.in);
+	static int person;
+	static int submenu;
 	public static void main(String[] args) {
+		
 
-		//Information.printInfo();
-		//Information.printTruckInfo();
+		iniSystem();
+
 		
 //		Iterator<Vehicle> list = v.iterator();
 //		while(list.hasNext()) 
@@ -26,18 +30,85 @@ public class Demo {
 //			System.out.printf("%06d%6d%10s%5s%6s%6s%n", 
 //					Vehicle.getVehicleID(),Vehicle.year,Vehicle.price,Vehicle.model,Vehicle.color,Truck.maxLoad);
 //		}
-		Person p = new Person("旺财", 16);
-		p.speak();
-		Person p1 = new Person("胖胖");
-		p1.speak();
-		Person p3 = new Person("Pang",22,"OZ");
-		p3.speak();
-		p1.compare(p3);
-		System.out.println(Person.country);
+		
+		
+		
+//		Person p = new Person("旺财", 16);
+//		p.speak();
+//		Person p1 = new Person("胖胖");
+//		p1.speak();
+//		Person p3 = new Person("Pang",22,"OZ");
+//		p3.speak();
+//		p1.compare(p3);
+//		System.out.println(Person.country);
 
 	}
-
+	public static void iniSystem() 
+	{
+		Information.setExitSaloonInfo();
+		Information.setTruckInfo();
+		Information.cloneInfo();
+		start();
+		menu();
+	}
 	
+	public static void loadData() 
+	{
+		
+		
+	}
+	
+	public static void start() 
+	{
+		System.out.println("Welcome to Vechile information system");
+		System.out.println("Please select from below:");
+		System.out.println("1 to veiw information");
+		System.out.println("2 to add new information");
+		System.out.println("0 to exit");
+		System.out.println("----------------------------------------");
+		person = s.nextInt();
+	}
+	
+	public static void menu()
+	{
+		
+		if (person ==1)
+		{
+			System.out.println("Saloon Information:");
+			Information.printSaloonInfo();
+			System.out.println("Truck Information");
+			Information.printTruckInfo();
+			start();
+			menu();
+		}
+		else if (person ==2) 
+		{
+			do
+				{
+				subMenu();	
+				
+				}while(submenu==1);
+			start();
+			menu();
+		}
+		else if (person ==0)
+		{
+			System.exit(0);
+		}
+		else
+		{
+			System.out.println("Error, start again.");
+			iniSystem();
+		}
+	}
+	
+	public static void subMenu() 
+	{
+		Information.setSaloonInfo();
+		System.out.println("added.want to continue? 1 for yes, 2 for no");
+		submenu = s.nextInt();	
+	}
+
 	public static void printArrayList(ArrayList<Vehicle> A) {
 		for(int i = 0; i<=A.size()-1; i++) 
 		{
