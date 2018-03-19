@@ -3,7 +3,11 @@ import java.util.Scanner;
 import polymorphism.Demo;
 
 import java.util.*;
-
+/**
+ * 
+ * @author HAOQUAN DAI
+ *
+ */
 public class Test {
 	static int i;
 	static Scanner s = new Scanner(System.in);
@@ -85,10 +89,10 @@ public class Test {
 		c1.printTable(8);//即便方法里已经有了变量9，还是会被覆盖
 		//TwoDArray.printTwoDArray(arr);
 
-		ArrayTool tool = new ArrayTool();//important
+		//ArrayTool tool = new ArrayTool();//对静态方法没有意义，只是浪费内存空间，直接ArrayList.方法()就可以
 		//int max = tool.getMax(A);
-		System.out.println(tool.getMax(A));
-		System.out.println(tool.getIndex(A, 4));
+		System.out.println(ArrayTool.getMax(A));
+		System.out.println(ArrayTool.getIndex(A, 4));
 		//RockPaperScissorGame.iniGame();
 		
 		
