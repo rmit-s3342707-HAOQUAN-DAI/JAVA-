@@ -48,10 +48,12 @@ public class ArrayTool {
 		
 		for(int i=0;i<arr.length;i++) 
 		{
-			if(i!=arr.length-1)
-				str = str+arr[i] + ",";
-			else
-				str = str+arr[i]+"]";
+			if(i!=arr.length-1) {
+				str = str + "," + arr[i];
+			}
+				else {
+				str = str + "," + arr[i];
+			}
 		}
 		return str;
 	}
